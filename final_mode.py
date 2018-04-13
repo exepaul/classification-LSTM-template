@@ -86,12 +86,9 @@ class LSTMclassifier():
         # training
         training_ = tf.train.AdamOptimizer().minimize(loss)
 
-        self.out = {'model': model,
-                    'output': final_output_both,
-                    'logits': logits_,
+        self.out = {'logits': logits_,
                     'prob': prob,
                     'pred': pred,
-                    'ce': ce,
                     'loss': loss,
                     'accuracy': accuracy,
                     'train': training_
